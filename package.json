@@ -1,9 +1,12 @@
 {
   "name": "ai-productivity-assistant",
   "version": "1.0.0",
-  "main": "index.js",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "if-env TYPE=server && (cd server && npm install) || (cd client && npm install)",
+    "server": "node ./server/server.js",
+    "client": "cd client && npm start"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,8 @@
     "url": "https://github.com/Gedionadamu/AI-Productivity-assistant/issues"
   },
   "homepage": "https://github.com/Gedionadamu/AI-Productivity-assistant#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "if-env": "^1.0.4"
+  }
 }
